@@ -1,4 +1,4 @@
-"""Application entry point."""
+"""Module entry point for `python -m calory_tracker`."""
 
 from calory_tracker.ui.main_window import run_app
 
