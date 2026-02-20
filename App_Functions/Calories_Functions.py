@@ -56,13 +56,13 @@ def save_value(input_value, filename):
     existing_values.update(new_values)
     
     # Save the updated dictionary back to the file
-    with open(filename, 'w') as f:
+    with open(app_state.user_data_file_path(filename), 'w') as f:
         f.write(str(existing_values))  # Convert dictionary back to string for storage
 
 # Functions for loading values from a file
 # Reads the entire file content and returns it as a string
 def load_value(filename):
-    with open(filename, 'r') as f:
+    with open(app_state.user_data_file_path(filename), 'r') as f:
         read = f.read()
     return read
 
